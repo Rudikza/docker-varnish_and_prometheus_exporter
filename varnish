@@ -1,0 +1,21 @@
+# Varnish environment configuration description. This was derived from
+# the old style sysconfig/defaults settings
+
+# Main configuration file. You probably want to change it.
+VARNISH_VCL_CONF=/etc/varnish/default.vcl
+
+# Default port to bind to
+VARNISH_LISTEN_PORT=8080
+
+# Admin interface listen port
+VARNISH_ADMIN_LISTEN_PORT=8081
+
+# Shared secret file for admin interface
+VARNISH_SECRET_FILE=/etc/varnish/secret
+
+# Backend storage specification, see Storage Types in the varnishd(5)
+# man page for details.
+VARNISH_STORAGE="malloc,200M"
+
+# Other options, see the man page z(1)
+DAEMON_OPTS="-p thread_pool_min=5 -p thread_pool_max=500 -p thread_pool_timeout=300"
